@@ -27,7 +27,7 @@ pragma solidity 0.8.25;
 
 contract seaport{
     address public owner;
-    uint public totalports=5;
+    uint public totalports=3;
     uint public total_ships=0;
 
     constructor(){
@@ -43,8 +43,8 @@ contract seaport{
     mapping(uint=>address) public shipatport;
 
     function dockShip(address _shipaddress) public onlyOwner{
-        require(total_ships<5,"no port available");
-        for(uint i=1;i<=5;i++){
+        require(total_ships<3,"no port available");
+        for(uint i=1;i<=3;i++){
             if(portavailability[i]==false){
                 portavailability[i]=true;
                 shipatport[i]=_shipaddress;
@@ -59,7 +59,7 @@ contract seaport{
         uint portofship=1;
         bool shipfound=false;
 
-        for(uint i=1;i<=5;i++){
+        for(uint i=1;i<=3;i++){
             if(shipatport[i]==_shipaddress){
                 portofship=i;
                 shipfound=true;
@@ -77,7 +77,7 @@ contract seaport{
     }
 
     function assertAvailabilty() public view{
-        assert(total_ships>0 && total_ships<=5);
+        assert(total_ships>0 && total_ships<=3);
     }
 }
 ```
