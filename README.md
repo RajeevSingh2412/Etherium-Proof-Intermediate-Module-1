@@ -92,8 +92,9 @@ contract seaport{
     1. Go to the "Deploy & Run Transactions" tab in the left-hand sidebar.
     2. Select the "SeaportManagement" contract from the dropdown menu.
     3. Click on the "Deploy" button.
-    4. Interacting with the Contract
-        Once the contract is deployed, you can interact with it by calling the functions. Ensure you are connected as the owner address to perform owner-restricted functions.
+    4. Interacting with the Contract.
+
+Once the contract is deployed, you can interact with it by calling the functions. Ensure you are connected as the owner address to perform owner-restricted functions.
 
 #### Dock Ship:
     1. Select the dockShip function.
